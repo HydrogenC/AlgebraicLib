@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgebraicLib", "AlgebraicLib\AlgebraicLib.csproj", "{052C5B13-C6B8-47E2-A0EE-60CBC3FC134C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "CPP\Test.csproj", "{6A7EB01D-7504-431B-B30A-40C256EAA4C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{6A7EB01D-7504-431B-B30A-40C256EAA4C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
