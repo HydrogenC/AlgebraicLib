@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace AlgebraicLib
 {
-    public class Expression
+    public class AlgebraicExpression
     {
+        /*
         public String Value;
         public List<String> Items = new List<String>();
-        public Expression(String theExpression)
+        public AlgebraicExpression(String theExpression)
         {
             Value = theExpression;
             String Temp = Value.Substring(0, 1);
@@ -63,16 +64,9 @@ namespace AlgebraicLib
                 }
             }
         }
-
-        public void OutputElement()
-        {
-            foreach (var i in Items)
-            {
-                Console.WriteLine(i);
-            }
-        }
-        public Int64 Length{
-            get => Items.Count;
-        }
+        */
+        
+        
+        public Int64 Length => 0;
     }
 }
