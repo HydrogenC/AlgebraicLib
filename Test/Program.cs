@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            
+            Monomial b=new Monomial("12e");
+            Console.WriteLine(b.moOperator+", "+b.moCoefficient);
         }
     }
 }
