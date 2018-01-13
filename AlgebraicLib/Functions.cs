@@ -8,7 +8,7 @@ namespace AlgebraicLib
         public static String OutputNumbers(String input, List<Char> output)
         {
             String list = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            foreach (var i in list)
+            foreach (Char i in list)
             {
                 if (input.Contains(i.ToString()))
                 {

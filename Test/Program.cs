@@ -13,7 +13,7 @@ namespace Test
         static void Main(string[] args)
         {
             Monomial b=new Monomial("12e");
-            Console.WriteLine(b.moOperator+", "+b.moCoefficient);
+            Console.WriteLine(b.Operator+", "+b.Coefficient);
         }
     }
 }
