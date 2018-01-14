@@ -6,7 +6,7 @@ namespace AlgebraicLib
     public class Monomial
     {
         private readonly List<Char> moLetters = new List<Char>();
-        private Int64 moCoefficient;
+        private Decimal moCoefficient;
 
         public Monomial()
         {
@@ -24,7 +24,7 @@ namespace AlgebraicLib
             }
         }
 
-        public Monomial(Int64 coefficient, String letters)
+        public Monomial(Decimal coefficient, String letters)
         {
             moCoefficient = coefficient;
             foreach (Char i in letters)
@@ -33,24 +33,24 @@ namespace AlgebraicLib
             }
         }
 
-        public Monomial(Int64 coefficient, List<Char> letters)
+        public Monomial(Decimal coefficient, List<Char> letters)
         {
             moCoefficient = coefficient;
             moLetters = letters;
         }
 
-        public Monomial(Int64 coefficient, Char[] letters)
+        public Monomial(Decimal coefficient, Char[] letters)
         {
             moCoefficient = coefficient;
             moLetters = new List<Char>(letters);
         }
 
-        public Int64 AbsCoefficient
+        public Decimal AbsCoefficient
         {
             get => Math.Abs(moCoefficient);
         }
 
-        public Int64 Coefficient
+        public Decimal Coefficient
         {
             get => moCoefficient;
             set => moCoefficient = value;

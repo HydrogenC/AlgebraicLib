@@ -5,9 +5,9 @@ namespace AlgebraicLib
 {
     public class Functions
     {
-        public static Int64 OutputNumbers(String input, List<Char> output)
+        public static Decimal OutputNumbers(String input, List<Char> output)
         {
-            String list = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const String list = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             String temp = input;
             foreach (Char i in list)
             {
@@ -18,7 +18,7 @@ namespace AlgebraicLib
                 }
             }
 
-            return Int64.Parse(temp);
+            return Decimal.Parse(temp);
         }
     }
 }

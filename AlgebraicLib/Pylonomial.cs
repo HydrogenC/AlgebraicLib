@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace AlgebraicLib
 {
@@ -41,6 +42,30 @@ namespace AlgebraicLib
         public List<Monomial> Monomials
         {
             get => moList;
+        }
+
+        public Int64 Round()
+        {
+            for (Int64 i = 1;; i += 1)
+            {
+                Boolean isInteger = true;
+                foreach (var j in Monomials)
+                {
+                    if ((i * j.Coefficient) % 1 != 0)
+                    {
+                        isInteger = false;
+                    }
+                }
+
+                if (isInteger)
+                {
+                    foreach (var j in Monomials)
+                    {
+                        j.Coefficient *= i;
+                    }
+                    return i;
+                }
+            }
         }
     }
 }
