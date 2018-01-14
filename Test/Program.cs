@@ -12,8 +12,14 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Monomial b=new Monomial("12e");
-            Console.WriteLine(b.Operator+", "+b.Coefficient);
+            Monomial b=new Monomial();
+            b=new Monomial("-1234yv");
+            Console.WriteLine(b.Operator);
+            Console.WriteLine(b.Coefficient);
+            foreach (var i in b.Letters)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }

@@ -7,14 +7,13 @@ namespace AlgebraicLib
 {
     public class Monomial
     {
-        private String moValue="";
         private Char moOperator;
         private readonly List<Char> moLetters=new List<Char>();
         private Int64 moCoefficient;
 
         public Monomial()
         {
-            moValue = "";
+            
         }
 
         public Monomial(Char monoOperator, String monomial)
@@ -26,12 +25,14 @@ namespace AlgebraicLib
             else
             {
                 throw new Exception("Invaild operator");
+                return;
             }
-
             if (monomial.StartsWith("+") || monomial.StartsWith("-"))
             {
                 throw new Exception("Try to use Monomial(String: monomial)! ");
+                return;
             }
+            moCoefficient=Functions.OutputNumbers(monomial, moLetters);
         }
 
         public Monomial(String monomial)
@@ -52,15 +53,83 @@ namespace AlgebraicLib
                 {
                     moOperator = '+';
                 }
-
-                moValue = monomial;
-                monomial=Functions.OutputNumbers(monomial, moLetters);
-                Int64.TryParse(monomial, out moCoefficient);
+                moCoefficient=Functions.OutputNumbers(monomial, moLetters);
             }
             else
             {
                 throw new Exception("Try to use Monomial()! ");
+                return;
             }
+        }
+        
+        public Monomial(Int64 coefficient, String letters)
+        {
+            if (coefficient < 0)
+            {
+                moOperator = '-';
+                moCoefficient = -coefficient;
+            }
+            else
+            {
+                moOperator = '+';
+                moCoefficient = coefficient;
+            }
+
+            foreach (Char i in letters)
+            {
+                moLetters.Add(i);
+            }
+        }
+
+        public Monomial(Char monoOperator, Int64 coefficient, String letters)
+        {
+            if (monoOperator.Equals('+') || monoOperator.Equals('-'))
+            {
+                moOperator = monoOperator;
+            }
+            else
+            {
+                throw new Exception("Invaild operator! ");
+                return;
+            }
+
+            moCoefficient = coefficient;
+            foreach (Char i in letters)
+            {
+                moLetters.Add(i);
+            }
+        }
+        
+        public Monomial(Char monoOperator, Int64 coefficient, List<Char> letters)
+        {
+            if (monoOperator.Equals('+') || monoOperator.Equals('-'))
+            {
+                moOperator = monoOperator;
+            }
+            else
+            {
+                throw new Exception("Invaild operator! ");
+                return;
+            }
+
+            moCoefficient = coefficient;
+            moLetters = letters;
+        }
+        
+        public Monomial(Char monoOperator, Int64 coefficient, Char[] letters)
+        {
+            if (monoOperator.Equals('+') || monoOperator.Equals('-'))
+            {
+                moOperator = monoOperator;
+            }
+            else
+            {
+                throw new Exception("Invaild operator! ");
+                return;
+            }
+
+            moCoefficient = coefficient;
+            moLetters = new List<Char>(letters);
         }
 
         public Int64 Coefficient
@@ -83,6 +152,24 @@ namespace AlgebraicLib
                     throw new Exception("Invaild operator! ");
                 }
             }
+        }
+
+        public String Value { 
+            get
+            {
+                String m = moOperator.ToString() + moCoefficient.ToString();
+                foreach (var i in moLetters)
+                {
+                    m += i.ToString();
+                }
+
+                return m;
+            }
+        }
+
+        public List<Char> Letters
+        {
+            get => moLetters;
         }
     }
 }

@@ -5,19 +5,20 @@ namespace AlgebraicLib
 {
     public class Functions
     {
-        public static String OutputNumbers(String input, List<Char> output)
+        public static Int64 OutputNumbers(String input, List<Char> output)
         {
             String list = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            String temp = input;
             foreach (Char i in list)
             {
-                if (input.Contains(i.ToString()))
+                if (temp.Contains(i.ToString()))
                 {
                     output.Add(i);
-                    input.Replace(i.ToString(), "");
+                    temp=temp.Replace(i.ToString(), "");
                 }
             }
 
-            return input;
+            return Int64.Parse(temp);
         }
     }
 }
