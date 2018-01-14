@@ -7,15 +7,11 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Monomial b=new Monomial();
-            b=new Monomial("-1234");
-            Console.WriteLine(b.Operator);
-            Console.WriteLine(b.Coefficient);
-            foreach (var i in b.Letters)
+            Pylonomial b=new Pylonomial("6c+3e");
+            foreach (var i in b.Monomials)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i.Value);
             }
-
             Console.ReadKey();
         }
     }

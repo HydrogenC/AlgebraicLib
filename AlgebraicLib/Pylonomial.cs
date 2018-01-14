@@ -26,11 +26,21 @@ namespace AlgebraicLib
                 {
                     if (i - previousOperator >= 2)
                     {
-                        
+                        temp.Add(pylonomial.Substring((Int16) previousOperator, (Int16) i - (Int16) previousOperator));
+                        previousOperator = i;
                     }
-                    temp.Add(pylonomial.Substring((Int16) previousOperator, (Int16) i - (Int16) previousOperator));
                 }
             }
+            temp.Add(pylonomial.Substring((Int16) previousOperator, pylonomial.Length - (Int16) previousOperator));
+            foreach (var i in temp)
+            {
+                moList.Add(new Monomial(i));
+            }
+        }
+
+        public List<Monomial> Monomials
+        {
+            get => moList;
         }
     }
 }
