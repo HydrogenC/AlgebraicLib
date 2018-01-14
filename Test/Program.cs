@@ -8,7 +8,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Fraction.Fraction fraction = new Fraction.Fraction();
+            Fraction.Fraction fraction = new Fraction.Fraction("4/6");
+            Console.Write(fraction.ToString());
+            Console.ReadKey();
         }
     }
 }

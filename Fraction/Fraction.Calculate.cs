@@ -32,6 +32,14 @@ namespace Fraction
             return new Fraction(BigInteger.Parse(a.ToString()), BigInteger.Parse(b.ToString()));
         }
 
+        public static Tuple<BigInteger, BigInteger> Reduction(BigInteger numerator,BigInteger denominator)
+        {
+            BigInteger gcd = GCD.GCD.GetGCD(numerator, denominator).GCD;
+            numerator = numerator / gcd;
+            denominator = denominator / gcd;
+            return new Tuple<BigInteger, BigInteger>(numerator,denominator);
+        }
+
         public static Fraction operator *(Fraction a, Fraction b)
         {
             return new Fraction(a.Numerator * b.Numerator, a.Denominator * b.Denominator);
