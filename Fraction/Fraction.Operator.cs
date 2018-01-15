@@ -27,7 +27,23 @@ namespace Fraction{
         
         public static Boolean operator ==(Fraction a, Fraction b)
         {
-            
+            if(a.ToString==b.ToString){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        public static Boolean operator !=(Fraction a, Fraction b){
+            if(a==b){
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
