@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{6035406B-90DF-42EC-A6A3-0A8D22D78927}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD", "GCD\GCD.csproj", "{79BDD85E-0691-4C83-906A-C8E80CAA4558}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFunctions", "MathFunctions\MathFunctions.csproj", "{C22B7C59-43A4-49F1-AF20-880D063C11AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{6035406B-90DF-42EC-A6A3-0A8D22D78927}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6035406B-90DF-42EC-A6A3-0A8D22D78927}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6035406B-90DF-42EC-A6A3-0A8D22D78927}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79BDD85E-0691-4C83-906A-C8E80CAA4558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79BDD85E-0691-4C83-906A-C8E80CAA4558}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79BDD85E-0691-4C83-906A-C8E80CAA4558}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79BDD85E-0691-4C83-906A-C8E80CAA4558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22B7C59-43A4-49F1-AF20-880D063C11AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22B7C59-43A4-49F1-AF20-880D063C11AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22B7C59-43A4-49F1-AF20-880D063C11AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22B7C59-43A4-49F1-AF20-880D063C11AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

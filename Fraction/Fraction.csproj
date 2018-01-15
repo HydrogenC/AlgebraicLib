@@ -45,11 +45,5 @@
     <Compile Include="Fraction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GCD\GCD.csproj">
-      <Project>{79bdd85e-0691-4c83-906a-c8e80caa4558}</Project>
-      <Name>GCD</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
