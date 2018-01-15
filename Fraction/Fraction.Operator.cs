@@ -2,7 +2,7 @@ using System;
 using System.Numerics;
 
 namespace Fraction{
-    public paritial class Fraction{
+    public partial class Fraction{
         public static Fraction operator *(Fraction a, Fraction b)
         {
             return new Fraction(a.Numerator * b.Numerator, a.Denominator * b.Denominator);
