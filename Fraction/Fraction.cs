@@ -81,12 +81,5 @@ namespace Fraction
             get => denominator;
             set => denominator = value;
         }
-
-        public void Reduct()
-        {
-            Tuple<BigInteger, BigInteger> temp = Reduction(numerator, denominator);
-            numerator = temp.Item1;
-            denominator = temp.Item2;
-        }
     }
 }
